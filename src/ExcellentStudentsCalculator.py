@@ -13,7 +13,7 @@ class ExcellentStudentsCalculator:
         for student in self.data:
             scores = [score for _, score in self.data[student]]
             if scores and all(
-                s >= self.EXCELLENT_THRESHOLD for s in scores
+                s > self.EXCELLENT_THRESHOLD for s in scores
             ):
                 count += 1
         return count
