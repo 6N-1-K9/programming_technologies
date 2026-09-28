@@ -2,8 +2,8 @@
 import pytest
 
 from src.main import get_path_from_arguments, get_reader
-from src.TextDataReader import TextDataReader
-from src.YamlDataReader import YamlDataReader
+from TextDataReader import TextDataReader
+from YamlDataReader import YamlDataReader
 
 
 class TestMain:

@@ -16,9 +16,9 @@ pip install -r requirements.txt
 
 ## Запуск
 
-PYTHONPATH=./src python src/main.py -p data/data.yaml
+python src/main.py -p data/data.yaml
 
 ## Тестирование
 
-PYTHONPATH=./src pytest test
+pytest
 pycodestyle src test
