@@ -1,0 +1,86 @@
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="manual" version="22.0.0">
+  <diagram id="class-diag" name="Class Diagram">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="DataReader" value="&lt;&lt;abstract&gt;&gt;&#10;DataReader" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="240" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="DataReader-read" value="+ read(path: str): DataType" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=2;whiteSpace=wrap;html=1;" vertex="1" parent="DataReader">
+          <mxGeometry y="40" width="240" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="TextDataReader" value="TextDataReader" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="240" width="240" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="TextDataReader-attrs" value="- key: str&#10;- students: DataType" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="TextDataReader">
+          <mxGeometry y="26" width="240" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="TextDataReader-methods" value="+ __init__(): None&#10;+ read(path: str): DataType" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="TextDataReader">
+          <mxGeometry y="66" width="240" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="YamlDataReader" value="YamlDataReader" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="240" width="240" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="YamlDataReader-attrs" value="- students: DataType" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="YamlDataReader">
+          <mxGeometry y="26" width="240" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="YamlDataReader-methods" value="+ __init__(): None&#10;+ read(path: str): DataType" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="YamlDataReader">
+          <mxGeometry y="56" width="240" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="CalcRating" value="CalcRating" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="40" width="260" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="CalcRating-attrs" value="- data: DataType&#10;- rating: RatingType" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="CalcRating">
+          <mxGeometry y="26" width="260" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="CalcRating-methods" value="+ __init__(data: DataType): None&#10;+ calc(): RatingType" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="CalcRating">
+          <mxGeometry y="66" width="260" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="ExcellentStudentsCalculator" value="ExcellentStudentsCalculator" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="980" y="40" width="300" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="Esc-attrs" value="+ EXCELLENT_THRESHOLD = 90&#10;- data: DataType" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ExcellentStudentsCalculator">
+          <mxGeometry y="26" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="Esc-methods" value="+ __init__(data: DataType): None&#10;+ calc(): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ExcellentStudentsCalculator">
+          <mxGeometry y="66" width="300" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge-txt" style="endArrow=block;endFill=0;html=1;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="TextDataReader" target="DataReader">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-yaml" style="endArrow=block;endFill=0;html=1;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="YamlDataReader" target="DataReader">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="Types" value="&lt;&lt;module&gt;&gt; Types&#10;&#10;DataType = dict[str, list[tuple[str, int]]]&#10;RatingType = dict[str, float]" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=20;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="450" width="360" height="120" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="Main" value="&lt;&lt;module&gt;&gt; main&#10;&#10;+ get_path_from_arguments(args): str&#10;+ get_reader(path: str): DataReader&#10;+ main(): None" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=20;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="660" y="450" width="360" height="140" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge-main-txt" style="endArrow=open;html=1;dashed=1;edgeStyle=orthogonalEdgeStyle;exitX=0.3;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="Main" target="TextDataReader">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-main-yaml" style="endArrow=open;html=1;dashed=1;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="Main" target="YamlDataReader">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-main-calc" style="endArrow=open;html=1;dashed=1;edgeStyle=orthogonalEdgeStyle;exitX=0.7;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="Main" target="CalcRating">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-main-esc" style="endArrow=open;html=1;dashed=1;edgeStyle=orthogonalEdgeStyle;exitX=0.9;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="Main" target="ExcellentStudentsCalculator">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
